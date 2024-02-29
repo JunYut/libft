@@ -6,7 +6,7 @@
 #    By: we <we@student.42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 14:09:15 by tjun-yu           #+#    #+#              #
-#    Updated: 2024/02/29 17:06:00 by we               ###   ########.fr        #
+#    Updated: 2024/02/29 17:46:04 by we               ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,8 @@ $(NAME) : $(OBJECTS)
 bonus: $(OBJECTS) $(BONUS_OBJS)
 	ar rcs $(NAME) $^
 	ranlib $(NAME)
+
+obj : $(OBJECTS) $(BONUS_OBJS)
 
 $(OBJ_DIR)%.o : %.c $(INCLUDE)
 	cc $(CFLAGS) -c -I.$(INCLUDE) $< -o $@

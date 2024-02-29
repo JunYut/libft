@@ -1,18 +1,17 @@
-# Compiler and flags
-CC = cc
+# Compiler & Flags
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 # Directories
 OBJ_DIR = ../obj/
 
-# Sources and targets
-SOURCES = 	ft_printf.c char_parser.c str_parser.c ptr_parser.c decimal_parser.c\
-			unsigned_parser.c low_hexa_parser.c up_hexa_parser.c
+# Sources & Objects & Includes & Targets
+SOURCES = get_next_line.c get_next_line_utils.c
 OBJECTS = $(SOURCES:%.c=$(OBJ_DIR)%.o)
-INCLUDE = ft_printf.h
-NAME = libftprintf.a
+INCLUDE = get_next_line.h
+NAME = libgnl.a
 
-# Rules and recipes
+# Rules & Recipes
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
