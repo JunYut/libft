@@ -2,13 +2,14 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
+# Directories
+OBJ_DIR = ../obj/
+
 # Sources and targets
-SRC_DIR = ./
 SOURCES = 	ft_printf.c char_parser.c str_parser.c ptr_parser.c decimal_parser.c\
 			unsigned_parser.c low_hexa_parser.c up_hexa_parser.c
-SRC_PATH = $(addprefix $(SRC_DIR), $(SOURCES))
-OBJECTS = $(SRC_PATH:.c=.o)
-
+OBJECTS = $(SOURCES:%.c=$(OBJ_DIR)%.o)
+INCLUDE = ft_printf.h
 NAME = libftprintf.a
 
 # Rules and recipes
@@ -16,6 +17,9 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
+
+$(OBJ_DIR)%.o: %.c $(INCLUDE)
+	$(CC) $(CFLAGS) -c -I.$(INCLUDE) $< -o $@
 
 clean:
 	rm -f $(OBJECTS)

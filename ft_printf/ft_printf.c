@@ -6,11 +6,11 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 08:40:17 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/29 11:19:00 by we               ###   ########.fr       */
+/*   Updated: 2024/02/29 16:06:47 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 const char	*arg_parser(const char *format, va_list args)
 {

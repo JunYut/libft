@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   up_hexa_parser.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:36:15 by tjun-yu           #+#    #+#             */
-/*   Updated: 2023/11/09 11:44:35 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/29 16:07:42 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 static void	decimal_to_hexa(unsigned int decimal, char *parsed_arg)
 {

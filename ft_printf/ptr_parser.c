@@ -6,11 +6,11 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:32:00 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/29 11:45:03 by we               ###   ########.fr       */
+/*   Updated: 2024/02/29 16:07:23 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 static void	decimal_to_hexa(unsigned long long decimal, char *parsed_arg)
 {

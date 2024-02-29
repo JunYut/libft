@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   str_parser.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:33:38 by tjun-yu           #+#    #+#             */
-/*   Updated: 2023/11/08 15:01:40 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/02/29 16:07:27 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 const char	*str_parser(va_list args)
 {

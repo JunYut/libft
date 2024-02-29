@@ -3,15 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+         #
+#    By: we <we@student.42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 14:09:15 by tjun-yu           #+#    #+#              #
-#    Updated: 2023/10/30 13:03:18 by tjun-yu          ###   ########.fr        #
+#    Updated: 2024/02/29 17:06:00 by we               ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Flags
 CFLAGS = -Wall -Wextra -Werror
+
+# Directories
+OBJ_DIR = ../obj/
 
 #Sources & targets
 SOURCES =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c\
@@ -21,10 +24,10 @@ SOURCES =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c\
 			ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c\
 			ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c\
 			ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
-OBJECTS = $(SOURCES:.c=.o)
+OBJECTS = $(SOURCES:%.c=$(OBJ_DIR)%.o)
 BONUS =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
 		ft_lstdelone.c ft_lstiter.c ft_lstclear.c ft_lstmap.c
-BONUS_OBJS = $(BONUS:.c=.o)
+BONUS_OBJS = $(BONUS:%.c=$(OBJ_DIR)%.o)
 INCLUDE = libft.h
 NAME = libft.a
 
@@ -39,8 +42,8 @@ bonus: $(OBJECTS) $(BONUS_OBJS)
 	ar rcs $(NAME) $^
 	ranlib $(NAME)
 
-.c.o:
-	cc $(CFLAGS) -c -I $(INCLUDE) $< -o $(<:.c=.o)
+$(OBJ_DIR)%.o : %.c $(INCLUDE)
+	cc $(CFLAGS) -c -I.$(INCLUDE) $< -o $@
 
 clean :
 	rm -f $(OBJECTS) $(BONUS_OBJS)

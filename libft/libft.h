@@ -6,12 +6,12 @@
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 09:49:25 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/02/29 12:05:31 by we               ###   ########.fr       */
+/*   Updated: 2024/02/29 16:55:38 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFTLIBFT_H
+# define LIBFTLIBFT_H
 
 # include <stdlib.h>
 # include <unistd.h>
