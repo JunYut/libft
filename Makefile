@@ -13,8 +13,11 @@ NAME = libft.a
 # Rules & Recipes
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(FT_PRINTF) $(GET_NEXT_LINE)
+$(NAME): $(OBJ_DIR) $(LIBFT) $(FT_PRINTF) $(GET_NEXT_LINE)
 	ar rc $(NAME) $(OBJ_DIR)*.o
+
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
 
 $(LIBFT):
 	make -C $(LIBFT_DIR) obj
