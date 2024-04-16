@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjun-yu <tanjunyu8888@gmail.com>           +#+  +:+       +#+        */
+/*   By: tjun-yu <tjun-yu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 13:23:51 by tjun-yu           #+#    #+#             */
-/*   Updated: 2023/10/27 14:42:23 by tjun-yu          ###   ########.fr       */
+/*   Updated: 2024/04/16 12:13:24 by tjun-yu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **list, void (*del)(void *))
 {
 	t_list	*temp;
 
-	if (list == NULL || *list == NULL || del == NULL)
+	if (list == NULL || *list == NULL)
 		return ;
 	while (*list != NULL)
 	{
