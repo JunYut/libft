@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: we <we@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/30 13:01:24 by tjun-yu           #+#    #+#             */
-/*   Updated: 2024/05/10 13:58:44 by we               ###   ########.fr       */
+/*   Created: 2024/05/10 12:38:53 by we                #+#    #+#             */
+/*   Updated: 2024/05/10 12:42:41 by we               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
+int	ft_pow(int num, int pow)
+{
+	int	result;
 
-# include "../c_libft.h"
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
-# endif
-
-char	*get_next_line(int fd);
-
-char	*c_strjoin(char **str1, const char *str2);
-
-#endif
+	if (num * pow > INT_MAX)
+		return (0);
+	result = 1;
+	while (pow--)
+		result *= num;
+	return (result);
+}
